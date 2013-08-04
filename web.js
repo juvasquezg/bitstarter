@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
-var infile = "index.txt";
+var infile = "index.html";
 var textBuffer = fs.readFileSync(infile);
 
 app.get('/', function(request, response) {

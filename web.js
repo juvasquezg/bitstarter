@@ -2,9 +2,13 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
+var infile = "index.txt";
+var textBuffer = fs.readFileSync(infile);
+
 app.get('/', function(request, response) {
-  response.send('Hello World 2!');
+  response.send(textBuffer.toString());
 });
+
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {

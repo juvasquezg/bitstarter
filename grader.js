@@ -29,6 +29,8 @@ var HTMLFILE_DEFAULT = "index.html";
 var HEROKUURL = "http://agile-chamber-8377.herokuapp.com";
 var CHECKSFILE_DEFAULT = "checks.json";
 
+
+
 var assertFileExists = function(infile) {
     var instr = infile.toString();
     if(!fs.existsSync(instr)) {

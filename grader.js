@@ -65,13 +65,13 @@ var clone = function(fn) {
     return fn.bind({});
 };
 
-//rest.get(herokuurl).on('complete', function(result) {
-//    if (result instanceof Error) {
-//            console.error('Error: ' + util.format(response.message));
-//    }else{
-//	console.log(result);
-//    }
-//});
+rest.get(HEROKUURL).on('complete', function(result) {
+    if (result instanceof Error) {
+            console.log('Error: ', result.message);
+    }else{
+	console.log(result);
+    }
+});
 
 if(require.main == module) {
     program
